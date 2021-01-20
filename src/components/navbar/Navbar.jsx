@@ -12,7 +12,7 @@ const Navbar = ({ homeHeight, aboutHeight, projectsHeight, contactHeight}) => {
         let thirdTreshold = homeHeight + aboutHeight + projectsHeight - firstTreshold*0.1;
 
         console.log(window.scrollY);
-        if (window.scrollY > firstTreshold && window.scrollY < secondTreshold || window.scrollY > thirdTreshold) {
+        if ((window.scrollY > firstTreshold && window.scrollY < secondTreshold) || (window.scrollY > thirdTreshold)) {
             setNavLinks("alt-nav-links");
         } else {
             setNavLinks("nav-links");
