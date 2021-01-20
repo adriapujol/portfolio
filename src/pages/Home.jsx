@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
 import drawing from '../img/meDrawing.png';
 
-const Home = () => {
+
+
+const Home = ({ setHomeHeight }) => {
+
+    useEffect(() => {
+        setHomeHeight(document.getElementById("home").offsetHeight);
+    }, [setHomeHeight])
+
     return (
         <div className="content-wrapper" id="home">
             <div className="hero full-box bg-yellow">

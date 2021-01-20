@@ -40,4 +40,23 @@ $bg-yellow: #f4d35e;
             }
         }
     }
+
+    .alt-nav-links {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+
+        .link {
+            font-family: 'Russo One', sans-serif;
+            color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition:  0.025s;
+
+            &:hover {
+                color: $bg-yellow;
+            }
+        }
+
+    }
 }

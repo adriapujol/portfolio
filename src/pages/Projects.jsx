@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Projects = () => {
+const Projects = ({setProjectsHeight}) => {
+
+    useEffect(() => {
+        setProjectsHeight(document.getElementById("projects").offsetHeight);
+    }, [setProjectsHeight])
+
     return (
         <div className="content-wrapper" id="projects">
             <div className="projects full-box bg-yellow">
