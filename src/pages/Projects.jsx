@@ -2,8 +2,8 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <div className="content-wrapper">
-            <div className="hero">
+        <div className="content-wrapper" id="projects">
+            <div className="projects full-box bg-yellow">
                THIS PROJECTSSSSS
             </div>
         </div>

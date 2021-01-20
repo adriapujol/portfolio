@@ -6,6 +6,23 @@
 
 }
 
-$bg-yellow: #f4d35e;
-$bg-black: #000000;
+$yellow: #f4d35e;
+$black: #000000;
 
+.content-wrapper {
+    height: 100vh;
+    width: 100%;
+
+    .full-box {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-black {
+    background-color: $black;
+}

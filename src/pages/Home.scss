@@ -1,0 +1,60 @@
+$yellow: #f4d35e;
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 13em;
+    
+    .landing-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 770px;
+        // margin-left: 2.5em;
+    }
+}
+
+.title-content {
+    
+    height: 100%;
+    position: relative;
+    top: 35%;
+    // margin-right: 2.55em;
+
+    .title {
+        font-family: 'Russo One', sans-serif;
+        font-size: 5em;
+        margin-bottom: -10px;
+    }
+
+    .subtitle {
+        // font-family: 'Russo One', sans-serif;
+        font-size: 2.5em;
+    }
+
+    a:link, a:visited {
+        // font-family: 'Russo One', sans-serif;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        font-size: 2em;
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.5s;
+
+        // border: none;
+        // cursor: pointer;
+    }
+
+    a:hover, a:active {
+        color: $yellow;
+        font-size: 2em;
+        // background-color: #ffffff;
+        
+
+        // font-size: 1.75em;
+    }
+
+}
