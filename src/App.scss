@@ -16,7 +16,14 @@ $black: #000000;
     .full-box {
         height: 100%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+}
+
+.section-title {
+    // font-size: 2.5em;
 }
 
 .bg-yellow {

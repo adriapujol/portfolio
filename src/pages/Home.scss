@@ -3,13 +3,15 @@ $yellow: #f4d35e;
 .hero {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
-    padding: 0 13em;
+    align-items: center;
+    height: 100%;
+    width: 75%;
     
     .landing-img {
         max-width: 100%;
         height: auto;
         max-height: 770px;
+        align-self: flex-end;
         // min-width: 300px;
         // min-height: 500px;
         // margin-left: 2.5em;
@@ -18,10 +20,9 @@ $yellow: #f4d35e;
 
 .title-content {
     
-    height: 100%;
-    position: relative;
-    top: 35%;
-    // margin-right: 2.55em;
+    // height: 100%;
+    // position: relative;
+    // top: 0;
 
     .title {
         font-family: 'Russo One', sans-serif;
@@ -45,18 +46,11 @@ $yellow: #f4d35e;
         text-decoration: none;
         display: inline-block;
         transition: 0.5s;
-
-        // border: none;
-        // cursor: pointer;
     }
 
     a:hover, a:active {
         color: $yellow;
         font-size: 2em;
-        // background-color: #ffffff;
-        
-
-        // font-size: 1.75em;
     }
 
 }

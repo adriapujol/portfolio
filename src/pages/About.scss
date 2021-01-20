@@ -1,0 +1,21 @@
+.about {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+
+    font-size: 1.5em;
+    text-align: justify;
+    text-justify: inter-word;
+
+    h1 {
+        margin-bottom: 0.3em;
+    }
+
+    .about-me {
+        margin-bottom: 3em;
+    }
+
+}

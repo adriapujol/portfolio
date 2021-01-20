@@ -9,9 +9,8 @@ const Navbar = ({ homeHeight, aboutHeight, projectsHeight, contactHeight}) => {
 
         let firstTreshold = homeHeight - homeHeight*0.1;
         let secondTreshold = homeHeight + aboutHeight;
-        let thirdTreshold = homeHeight + aboutHeight + projectsHeight - firstTreshold*0.1;
-
-        console.log(window.scrollY);
+        let thirdTreshold = homeHeight + aboutHeight + projectsHeight - firstTreshold*0.15;
+        
         if ((window.scrollY > firstTreshold && window.scrollY < secondTreshold) || (window.scrollY > thirdTreshold)) {
             setNavLinks("alt-nav-links");
         } else {
