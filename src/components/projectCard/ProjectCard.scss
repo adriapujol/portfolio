@@ -1,0 +1,36 @@
+.project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-size: 17px;
+    // text-align: center;
+
+    .card-body {
+        margin: 1em 2em 1em 2em;
+        text-align: justify;
+        text-justify: inter-word;
+
+        .card-title {
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        .card-desc {
+            margin-bottom: 1em;
+        }
+
+        .card-links {
+            .card-code {
+                float: left;
+            }
+            .card-web {
+                float: right;
+            }
+        }
+    }
+    
+}
