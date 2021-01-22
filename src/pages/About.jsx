@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
 import './About.scss';
+import cssLogo from '../img/css.png';
+import htmlLogo from '../img/html.png';
+import jsLogo from '../img/javascript.png';
+import reactLogo from '../img/react.png';
+import phLogo from '../img/photoshop.png';
+import aiLogo from '../img/ilustrator.png';
 
 const About = ({ setAboutHeight }) => {
 
@@ -20,9 +26,17 @@ const About = ({ setAboutHeight }) => {
                         imperdiet tempus risus. Donec vehicula, ante id mollis facilisis,
                         orci sem commodo urna, eu luctus risus risus a magna.
                         Vestibulum blandit nec massa id suscipit. Fusce eu velit lectus.
-                </div>
+                    </div>
                     <h1 className="section-title">Skills</h1>
                     <div className="skills-text">HTML, CSS, JavaScript, React, Photoshop, Illustrator</div>
+                    <div className="img-box">
+                        <img src={htmlLogo} alt="HTML" />
+                        <img src={cssLogo} alt="CSS" />
+                        <img src={jsLogo} alt="JavaScript" />
+                        <img src={reactLogo} alt="React" />
+                        <img src={phLogo} alt="Photoshop" />
+                        <img src={aiLogo} alt="Illustrator" />
+                    </div>
                 </div>
             </div>
         </div>
