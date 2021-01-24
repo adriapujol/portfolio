@@ -1,6 +1,7 @@
 $bg-yellow: #f4d35e;
 
 .navbar {
+    position: relative;
     width: 100%;
     padding: 0 50px;
     display: flex;
@@ -8,7 +9,7 @@ $bg-yellow: #f4d35e;
     align-items: center;
     height: 10vh;
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     transition: all 0.10s ease-in;
 
     .logo>a {
@@ -22,6 +23,7 @@ $bg-yellow: #f4d35e;
             color: red;
         }
     }
+    
 
 
     .nav-links {
@@ -33,7 +35,7 @@ $bg-yellow: #f4d35e;
             font-family: 'Russo One', sans-serif;
             font-size: 1.5em;
             text-decoration: none;
-            transition: 0.05s;
+            transition: all 0.05s ease-in-out;
         }
 
         .link-black {
@@ -50,26 +52,88 @@ $bg-yellow: #f4d35e;
         }
     }
 
-    .alt-nav-links {
-        display: flex;
-        justify-content: space-between;
-        width: 500px;
-
-        .link {
-            font-family: 'Russo One', sans-serif;
-            color: #fff;
-            font-size: 1.5em;
-            text-decoration: none;
-            transition:  0.025s;
-
-            &:hover {
-                color: $bg-yellow;
-            }
+    .burger-menu {
+        position: relative;
+        height: 30px;
+        width: 35px;
+        z-index: 100;
+        display: none;
+        // display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: all 0.1s ease-in-out;
+        
+        .burger-line {
+            height: 5px;
+            width: 35px;
+            margin-bottom: 5px;
+        }
+        
+        .burger-black {
+            background-color: black;
         }
 
+        .burger-white {
+            background-color: white;
+        }
+
+        .line-1 {
+            position: absolute;
+            transform: rotate(45deg);
+        }
+        .line-2 {
+            display: none;
+        }
+        .line-3 {
+            position: absolute;
+            transform: rotate(-45deg);
+        }
     }
+
+    @media only screen and (max-width: 1080px) {
+        .burger-menu {
+            display: flex;
+        }
+        
+        .nav-links {
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            right: -225px;
+            top: -225px;
+            background-color: white;
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+
+            .link {
+                position: relative;
+                left: 25%;
+                top: 20%;
+                margin-bottom: 2em;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+            }
+
+        }
+        .show-menu {
+            display: flex;
+        }
+      }
+
+    
+    
 }
+
+
+
 
 .bg-solid {
     background-color: #000000;
 }
+
