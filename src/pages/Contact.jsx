@@ -1,10 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const Contact = ({setContactHeight}) => {
-
-    useEffect(() => {
-        setContactHeight(document.getElementById("projects").offsetHeight);
-    }, [setContactHeight])
+const Contact = () => {
 
     return (
         <div className="content-wrapper" id="contact">

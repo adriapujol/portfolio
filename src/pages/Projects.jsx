@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Projects.scss';
 import ProjectCard from '../components/projectCard/ProjectCard';
 import projectOne from '../img/project1.jpg';
 import projectTwo from '../img/project2.jpg';
 
-const Projects = ({ setProjectsHeight }) => {
+const Projects = () => {
 
     const title = "Gym Log";
     const desc = "Web app that helps you track your progress in the gym. Lets you create workouts, exercises and save your lifts. Created with React, it uses Firebase authentication and Firestore as backend.";
@@ -16,10 +16,6 @@ const Projects = ({ setProjectsHeight }) => {
 
     const desc3 = "Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.";
 
-
-    useEffect(() => {
-        setProjectsHeight(document.getElementById("projects").offsetHeight);
-    }, [setProjectsHeight])
 
     return (
         <div className="content-wrapper" id="projects">

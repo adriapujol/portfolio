@@ -9,7 +9,7 @@ $bg-yellow: #f4d35e;
     height: 10vh;
     position: fixed;
     z-index: 100;
-    // background-color: $bg-yellow;
+    transition: all 0.10s ease-in;
 
     .logo>a {
         font-family: 'Russo One', sans-serif;
@@ -31,13 +31,21 @@ $bg-yellow: #f4d35e;
 
         .link {
             font-family: 'Russo One', sans-serif;
-            color: #000;
             font-size: 1.5em;
             text-decoration: none;
             transition: 0.05s;
+        }
 
+        .link-black {
+            color: #000;
             &:hover {
                 color: #fff;
+            }
+        }
+        .link-white {
+            color: #fff;
+            &:hover {
+                color: $bg-yellow;
             }
         }
     }
@@ -60,4 +68,8 @@ $bg-yellow: #f4d35e;
         }
 
     }
+}
+
+.bg-solid {
+    background-color: #000000;
 }

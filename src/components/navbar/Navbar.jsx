@@ -1,36 +1,29 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
 
-const Navbar = ({ homeHeight, aboutHeight, projectsHeight, contactHeight}) => {
+const Navbar = () => {
 
-    const [navLinks, setNavLinks] = useState("nav-links");
+    const [solidBackground, setSolidBackground] = useState(false);
 
-    const changeTextColor = () => {
-
-        let firstTreshold = homeHeight - homeHeight*0.1;
-        let secondTreshold = homeHeight + aboutHeight;
-        let thirdTreshold = homeHeight + aboutHeight + projectsHeight - firstTreshold*0.15;
-        
-        if ((window.scrollY > firstTreshold && window.scrollY < secondTreshold) || (window.scrollY > thirdTreshold)) {
-            setNavLinks("alt-nav-links");
+    const changeBackground = () => {
+        if (window.scrollY > 150) {
+            setSolidBackground(true);
         } else {
-            setNavLinks("nav-links");
+            setSolidBackground(false);
         }
     }
 
-    window.addEventListener('scroll', changeTextColor);
-
-
+    window.addEventListener('scroll', changeBackground);
 
     return (
-        <div className="navbar">
+        <div className={solidBackground ? "navbar bg-solid" : "navbar"}>
             <div className="logo">
                 <a className="home-link" href="#home">LOGO</a>
             </div>
-            <div className={navLinks}>
-                <a className="link" href="#about">About</a>
-                <a className="link" href="#projects">Projects</a>
-                <a className="link" href="#contact">Contact</a>
+            <div className="nav-links">
+                <a className={solidBackground ? "link link-white" : "link link-black"} href="#about">About</a>
+                <a className={solidBackground ? "link link-white" : "link link-black"} href="#projects">Projects</a>
+                <a className={solidBackground ? "link link-white" : "link link-black"} href="#contact">Contact</a>
             </div>
         </div>
     )

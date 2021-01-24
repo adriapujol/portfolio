@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './About.scss';
 import cssLogo from '../img/css.png';
 import htmlLogo from '../img/html.png';
@@ -7,11 +7,8 @@ import reactLogo from '../img/react.png';
 import phLogo from '../img/photoshop.png';
 import aiLogo from '../img/ilustrator.png';
 
-const About = ({ setAboutHeight }) => {
+const About = () => {
 
-    useEffect(() => {
-        setAboutHeight(document.getElementById("about").offsetHeight);
-    }, [setAboutHeight])
 
     return (
         <div className="content-wrapper" id="about">

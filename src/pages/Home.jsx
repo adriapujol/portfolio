@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Home.scss';
 import drawing from '../img/meDrawing.png';
 
 
 
-const Home = ({ setHomeHeight }) => {
-
-    useEffect(() => {
-        setHomeHeight(document.getElementById("home").offsetHeight);
-    }, [setHomeHeight])
+const Home = () => {
 
     return (
         <div className="content-wrapper" id="home">
