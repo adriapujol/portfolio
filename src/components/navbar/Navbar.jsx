@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { ReactComponent as Logo } from '../../img/logo-3.svg';
 import './Navbar.scss';
+
 
 const Navbar = () => {
 
@@ -32,7 +34,9 @@ const Navbar = () => {
     return (
         <div className={solidBackground ? "navbar bg-solid" : "navbar"}>
             <div className="logo">
-                <a className="home-link" href="#home">LOGO</a>
+                <a className="home-link" href="#home">
+                    <Logo className="logo-icon" fill={solidBackground ? "#fff" : "#000"} />
+                </a>
             </div>
             <div className="burger-menu" onClick={updateBurger}>
                 <div className={solidBackground && !clickedBurger ? whiteBurger1 : blackBurger1}></div>
@@ -40,9 +44,9 @@ const Navbar = () => {
                 <div className={solidBackground && !clickedBurger ? whiteBurger3 : blackBurger3}></div>
             </div>
             <div className={clickedBurger ? "nav-links show-menu" : "nav-links"}>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#about">About</a>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#projects">Projects</a>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#contact">Contact</a>
+                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#about" onClick={clickedBurger ? updateBurger : null}>About</a>
+                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#projects" onClick={clickedBurger ? updateBurger : null}>Projects</a>
+                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#contact" onClick={clickedBurger ? updateBurger : null}>Contact</a>
             </div>
         </div>
     )

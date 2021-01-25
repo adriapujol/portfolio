@@ -10,20 +10,18 @@ $bg-yellow: #f4d35e;
     height: 10vh;
     position: fixed;
     z-index: 99;
-    // transition: all 0.10s ease-in;
+    
+    .logo a {
+        .logo-icon {
+            height: 50px;
+            width: 50px;
+            transition: all 0.3s ease-in-out;
 
-    .logo>a {
-        font-family: 'Russo One', sans-serif;
-        color: #fff;
-        font-size: 2.5em;
-        text-decoration: none;
-        transition: 0.05s;
-
-        &:hover {
-            color: red;
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
     }
-    
 
 
     .nav-links {
@@ -54,19 +52,21 @@ $bg-yellow: #f4d35e;
 
     .burger-menu {
         position: relative;
-        height: 30px;
+        height: 35px;
         width: 35px;
         z-index: 100;
         display: none;
-        // display: flex;
         justify-content: space-around;
         flex-direction: column;
-        transition: all 0.1s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
         
         .burger-line {
             height: 5px;
             width: 35px;
             margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+
         }
         
         .burger-black {
@@ -82,7 +82,7 @@ $bg-yellow: #f4d35e;
             transform: rotate(45deg);
         }
         .line-2 {
-            display: none;
+            transform: translateX(-40px);
         }
         .line-3 {
             position: absolute;
@@ -96,10 +96,6 @@ $bg-yellow: #f4d35e;
         }
         
         .nav-links {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            display: none;
             justify-content: center;
             flex-direction: column;
             position: absolute;
@@ -109,29 +105,34 @@ $bg-yellow: #f4d35e;
             height: 600px;
             width: 600px;
             border-radius: 50%;
+            clip-path: circle(0px at 65% 37%);
+            -webkit-clip-path: circle(0px at 65% 37%);
+            transition: all 0.5s ease-in-out;
+
 
             .link {
                 position: relative;
                 left: 25%;
                 top: 20%;
                 margin-bottom: 2em;
-                // top: 50%;
-                // left: 50%;
-                // transform: translate(-50%, -50%);
+            }
+
+            .link-black {
+                color: #000;
+                &:hover {
+                    color: $bg-yellow;
+                }
             }
 
         }
         .show-menu {
             display: flex;
+            clip-path: circle(500px at  65% 37%);
+            -webkit-clip-path: circle(500px at  65% 37%);
         }
       }
-
-    
-    
+ 
 }
-
-
-
 
 .bg-solid {
     background-color: #000000;
