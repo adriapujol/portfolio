@@ -11,7 +11,7 @@ $bg-yellow: #f4d35e;
     position: fixed;
     z-index: 99;
     
-    .logo a {
+    .logo {
         .logo-icon {
             height: 50px;
             width: 50px;
@@ -34,6 +34,7 @@ $bg-yellow: #f4d35e;
             font-size: 1.5em;
             text-decoration: none;
             transition: all 0.05s ease-in-out;
+            cursor: pointer;
         }
 
         .link-black {

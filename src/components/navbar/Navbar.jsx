@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../../img/logo.svg';
 import './Navbar.scss';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 
 const Navbar = () => {
@@ -22,6 +23,10 @@ const Navbar = () => {
 
     window.addEventListener('scroll', changeBackground);
 
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
 
     let whiteBurger1 = clickedBurger ? "burger-line line-1 burger-white" : "burger-line burger-white";
     let whiteBurger2 = clickedBurger ? "burger-line line-2 burger-white" : "burger-line burger-white";
@@ -33,8 +38,8 @@ const Navbar = () => {
 
     return (
         <div className={solidBackground ? "navbar bg-solid" : "navbar"}>
-            <div className="logo">
-                <a className="home-link" href="#home">
+            <div className="logo">               
+                <a className="home-link" onClick={scrollToTop}>
                     <Logo className="logo-icon" fill={solidBackground ? "#fff" : "#000"} />
                 </a>
             </div>
@@ -44,9 +49,30 @@ const Navbar = () => {
                 <div className={solidBackground && !clickedBurger ? whiteBurger3 : blackBurger3}></div>
             </div>
             <div className={clickedBurger ? "nav-links show-menu" : "nav-links"}>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#about" onClick={clickedBurger ? updateBurger : null}>About</a>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#projects" onClick={clickedBurger ? updateBurger : null}>Projects</a>
-                <a className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"} href="#contact" onClick={clickedBurger ? updateBurger : null}>Contact</a>
+                <Link
+                    className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"}
+                    onClick={clickedBurger ? updateBurger : null}
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={300}
+                >About</Link>
+                <Link
+                    className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"}
+                    onClick={clickedBurger ? updateBurger : null}
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    duration={300}
+                >Projects</Link>
+                <Link
+                    className={solidBackground && !clickedBurger ? "link link-white" : "link link-black"}
+                    onClick={clickedBurger ? updateBurger : null}
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={300}
+                >Contact</Link>
             </div>
         </div>
     )
