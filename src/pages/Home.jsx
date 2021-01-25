@@ -1,6 +1,7 @@
 import React from 'react';
-import './Home.scss';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import drawing from '../img/meDrawing.png';
+import './Home.scss';
 
 
 
@@ -15,8 +16,22 @@ const Home = () => {
                         <div className="subtitle">Front End Developer &</div>
                         <div className="subtitle">Photo Retoucher</div>
                         <div className="call-box">
-                            <a className="call-to-action" href="#projects">Portfolio</a>
-                            <a className="call-to-action" href="#contact">Contact ME</a>
+                            <Link
+                                className="call-to-action"
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                duration={300}
+                            >Portfolio </Link>
+                            <Link
+                                className="call-to-action"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                duration={300}
+                            >Contact me</Link>
+                            {/* <a className="call-to-action" href="#projects">Portfolio</a>
+                            <a className="call-to-action" href="#contact">Contact ME</a> */}
                         </div>
                     </div>
                     <img className="landing-img" src={drawing} alt="Adria Pujol" />
