@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactComponent as Logo } from '../../img/logo-3.svg';
+import { ReactComponent as Logo } from '../../img/logo.svg';
 import './Navbar.scss';
 
 

@@ -14,7 +14,10 @@ const Home = () => {
                         <div className="title">Adrià Pujol</div>
                         <div className="subtitle">Front End Developer &</div>
                         <div className="subtitle">Photo Retoucher</div>
-                        <a className="call-to-action" href="#contact">Contact ME</a>
+                        <div className="call-box">
+                            <a className="call-to-action" href="#projects">Portfolio</a>
+                            <a className="call-to-action" href="#contact">Contact ME</a>
+                        </div>
                     </div>
                     <img className="landing-img" src={drawing} alt="Adria Pujol" />
                 </div>
