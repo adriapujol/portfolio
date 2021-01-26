@@ -10,12 +10,22 @@ $bg-yellow: #f4d35e;
     height: 10vh;
     position: fixed;
     z-index: 99;
+
+
+    @media only screen and (max-width: 555px) {
+        padding: 0 20px;
+    }
+
+    @media only screen and (max-width: 300px) {
+        padding: 0 10px;
+    }
     
     .logo {
         .logo-icon {
             height: 50px;
             width: 50px;
             transition: all 0.3s ease-in-out;
+            cursor: pointer;
 
             &:hover {
                 transform: rotate(360deg);

@@ -15,11 +15,13 @@ $yellow: #f4d35e;
     
     background-color: black;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
     
     transition: all 0.15s ease-in-out;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+
 
     &:hover {
         transform: scale(1.1);
@@ -27,7 +29,7 @@ $yellow: #f4d35e;
     }
 
     .card-body {
-        margin: 1em 2em 1em 2em;
+        margin: 1em 2.5em 1em 2.5em;
         text-align: justify;
         text-justify: inter-word;
 
@@ -64,4 +66,29 @@ $yellow: #f4d35e;
         }
     }
     
+}
+
+
+@media only screen and (max-width: 375px) {
+    .project-card {
+        
+        width: 250px;
+        height: 399px;
+        font-size: 14px;
+    
+        img {
+            height: auto;
+            width: 250px;
+        }
+    
+        &:hover {
+            transform: scale(1);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            border: 5px solid #fff;
+        }
+    
+        .card-body {
+            margin: 1em 1.5em 1em 1.5em;
+        }
+    }
 }
