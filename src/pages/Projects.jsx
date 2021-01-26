@@ -11,23 +11,21 @@ const Projects = () => {
     const code = "https://github.com/adriapujol/fit_log";
     const web = "https://adriapujol.github.io/fit_log/";
 
-    const title2= "Norris Facts";
+    const title2 = "Norris Facts";
     const desc2 = "Need a Chuck Norris fact right now? This is your site.";
 
     const desc3 = "Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.";
 
 
     return (
-        <div className="content-wrapper" id="projects">
-            <div className="full-box bg-yellow">
-                <div className="projects">
-                    <h1 className="section-title">Projects</h1>
-                    <div className="projects-grid">
-                        <ProjectCard title={title} desc={desc} code={code} web={web} img={projectOne} />
-                        <ProjectCard title={title2} desc={desc2} code={code} web={web} img={projectTwo} />
-                        <ProjectCard title={title} desc={desc2} code={code} web={web} img={projectOne} />
-                        <ProjectCard title={title} desc={desc} code={code} web={web} img={projectTwo} />
-                    </div>
+        <div className="full-box bg-yellow" id="projects">
+            <div className="projects">
+                <h1 className="section-title">Projects</h1>
+                <div className="projects-grid">
+                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectOne} />
+                    <ProjectCard title={title2} desc={desc2} code={code} web={web} img={projectTwo} />
+                    <ProjectCard title={title} desc={desc2} code={code} web={web} img={projectOne} />
+                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectTwo} />
                 </div>
             </div>
         </div>
