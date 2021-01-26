@@ -1,0 +1,50 @@
+$yellow: #f4d35e;
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    label {
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+    
+    input, textarea {
+        font-size: 1em;
+        padding: 0.5em;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    textarea {
+        resize: none;
+        height: 200px;
+
+        @media only screen and (max-width: 330px) {
+            height: 150px;
+        }
+    }
+
+    .form-btn {
+        padding: 0.5em 1em;
+        font-size: 2em;
+        font-weight: bold;
+        background-color: $yellow;
+        color: #000000;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.25s ease-in-out;
+        // border: 5px solid $yellow;
+        outline: 5px solid black;
+        border: 0;
+        cursor: pointer;
+
+        &:hover, &:active {
+            // color: #fff;
+            outline-offset: -10px;
+            background-color: $yellow;
+        }
+    }
+}
