@@ -10,8 +10,8 @@ const ProjectCard = ({ title, desc, code, web, img }) => {
                 <div className="card-desc">{desc}</div>
             </div>
             <div className="card-links">
-                <a href={code} target="_blank" className="card-code">code</a>
-                <a href={web} target="_blank" className="card-web">link</a>
+                <a href={code} target="_blank" className="card-code" rel="noopener noreferrer">code</a>
+                <a href={web} target="_blank" className="card-web" rel="noopener noreferrer">link</a>
             </div>
         </div>
     )

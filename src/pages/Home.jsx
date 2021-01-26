@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import drawing from '../img/meDrawing.png';
 import './Home.scss';
 
@@ -21,6 +21,7 @@ const Home = () => {
                             spy={true}
                             smooth={true}
                             duration={300}
+                            offset={-40}
                         >Portfolio </Link>
                         <Link
                             className="call-to-action"

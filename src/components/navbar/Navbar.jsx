@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Logo } from '../../img/logo.svg';
 import './Navbar.scss';
 import { Link, animateScroll as scroll } from 'react-scroll';
@@ -39,9 +39,9 @@ const Navbar = () => {
     return (
         <div className={solidBackground ? "navbar bg-solid" : "navbar"}>
             <div className="logo">               
-                <a className="home-link" onClick={scrollToTop}>
+                <div className="home-link" onClick={scrollToTop}>
                     <Logo className="logo-icon" fill={solidBackground ? "#fff" : "#000"} />
-                </a>
+                </div>
             </div>
             <div className="burger-menu" onClick={updateBurger}>
                 <div className={solidBackground && !clickedBurger ? whiteBurger1 : blackBurger1}></div>
@@ -55,6 +55,7 @@ const Navbar = () => {
                     to="about"
                     spy={true}
                     smooth={true}
+                    offset={-40}
                     duration={300}
                 >About</Link>
                 <Link
@@ -63,6 +64,7 @@ const Navbar = () => {
                     to="projects"
                     spy={true}
                     smooth={true}
+                    offset={-60}
                     duration={300}
                 >Projects</Link>
                 <Link
