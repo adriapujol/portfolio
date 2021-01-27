@@ -11,7 +11,6 @@ const Projects = () => {
 
     useEffect(() => {
         setPageHeight(heightRef.current.offsetTop);
-        console.log(heightRef.current.offsetTop);
     }, [setPageHeight])
 
     const title = "Gym Log";
