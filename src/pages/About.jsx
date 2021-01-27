@@ -9,7 +9,6 @@ import aiLogo from '../img/ilustrator.png';
 
 const About = () => {
 
-
     return (
         <div className="no-full-box bg-black" id="about">
             <div className="about">

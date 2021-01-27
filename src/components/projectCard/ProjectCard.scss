@@ -20,8 +20,7 @@ $yellow: #f4d35e;
     
     transition: all 0.15s ease-in-out;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-
-
+    opacity: 0;
 
     &:hover {
         transform: scale(1.1);
@@ -92,3 +91,20 @@ $yellow: #f4d35e;
         }
     }
 }
+
+
+.slide-in {
+    animation: 1s ease-out downUp;
+    opacity: 1;
+
+}
+
+@keyframes downUp {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+

@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Projects.scss';
 import ProjectCard from '../components/projectCard/ProjectCard';
 import projectOne from '../img/project1.jpg';
 import projectTwo from '../img/project2.jpg';
 
 const Projects = () => {
+
+    const [pageHeight, setPageHeight] = useState();
+    const heightRef = useRef();
+
+    useEffect(() => {
+        setPageHeight(heightRef.current.offsetTop);
+        console.log(heightRef.current.offsetTop);
+    }, [setPageHeight])
 
     const title = "Gym Log";
     const desc = "Web app that helps you track your progress in the gym. Lets you create workouts, exercises and save your lifts. Created with React, it uses Firebase authentication and Firestore as backend.";
@@ -16,16 +24,16 @@ const Projects = () => {
 
     const desc3 = "Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.";
 
-
     return (
-        <div className="no-full-box bg-yellow" id="projects">
+
+        <div className="no-full-box bg-yellow" id="projects" ref={heightRef}>
             <div className="projects">
                 <h1 className="section-title">Projects</h1>
                 <div className="projects-grid">
-                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectOne} />
-                    <ProjectCard title={title2} desc={desc2} code={code} web={web} img={projectTwo} />
-                    <ProjectCard title={title} desc={desc2} code={code} web={web} img={projectOne} />
-                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectTwo} />
+                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectOne} pageHeight={pageHeight} />
+                    <ProjectCard title={title2} desc={desc2} code={code} web={web} img={projectTwo} pageHeight={pageHeight} />
+                    <ProjectCard title={title} desc={desc2} code={code} web={web} img={projectOne} pageHeight={pageHeight} />
+                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectTwo} pageHeight={pageHeight} />
                 </div>
             </div>
         </div>

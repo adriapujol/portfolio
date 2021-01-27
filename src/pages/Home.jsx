@@ -8,7 +8,7 @@ import './Home.scss';
 const Home = () => {
 
     return (
-        <div className="full-box bg-yellow" id="home">
+        <div className="full-box bg-yellow" id="home" >
             <div className="hero">
                 <div className="title-content">
                     <div className="title">Adrià Pujol</div>

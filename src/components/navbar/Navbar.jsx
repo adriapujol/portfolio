@@ -4,7 +4,7 @@ import './Navbar.scss';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 
-const Navbar = () => {
+const Navbar = ({ setNavHeight }) => {
 
     const [solidBackground, setSolidBackground] = useState(false);
     const [clickedBurger, setClickedBurger] = useState(false);
@@ -37,8 +37,8 @@ const Navbar = () => {
 
 
     return (
-        <div className={solidBackground ? "navbar bg-solid" : "navbar"}>
-            <div className="logo">               
+        <div className={solidBackground ? "navbar bg-solid" : "navbar"} >
+            <div className="logo">
                 <div className="home-link" onClick={scrollToTop}>
                     <Logo className="logo-icon" fill={solidBackground ? "#fff" : "#000"} />
                 </div>
