@@ -94,17 +94,20 @@ $yellow: #f4d35e;
 
 
 .slide-in {
-    animation: 1s ease-out downUp;
-    opacity: 1;
+    animation: 0.4s 0.15s ease-out downUp;
+    animation-fill-mode: forwards;
+    // opacity: 1;
 
 }
 
 @keyframes downUp {
     0% {
-        transform: translateY(100px);
+        transform: translateY(70px);
+        opacity: 0;
     }
     100% {
         transform: translateY(0px);
+        opacity: 1;
     }
 }
 

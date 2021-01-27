@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import './ProjectCard.scss';
 
 const ProjectCard = ({ title, desc, code, web, img, pageHeight }) => {
@@ -7,18 +7,18 @@ const ProjectCard = ({ title, desc, code, web, img, pageHeight }) => {
 
     const cardRef = useRef();
 
-    const handleScroll = () => {
-        let elementTop;
-        if(cardRef) {
-            elementTop= cardRef.current.getBoundingClientRect().y;
-        }
-
-        if (elementTop < pageHeight - pageHeight*0.5) {
-            setSlideIn(true);
-        }
-    }
 
     useLayoutEffect(() => {
+        const handleScroll = () => {
+            let elementTop;
+            if(cardRef) {
+                elementTop= cardRef.current.getBoundingClientRect().y;
+            }
+    
+            if (elementTop < pageHeight - pageHeight*0.5) {
+                setSlideIn(true);
+            }
+        }
         window.addEventListener("scroll", handleScroll);
     }, [pageHeight])
 
