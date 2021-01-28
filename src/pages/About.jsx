@@ -12,7 +12,7 @@ const About = () => {
     return (
         <div className="no-full-box bg-black" id="about">
             <div className="about">
-                <h1 className="section-title">About</h1>
+                <div className="section-title">About</div>
                 <div className="about-me">
                     Motivated and multifaceted Bachelor in Telecommunication Technologies Engineering 
                     focused and highly interested in web development. 
@@ -20,7 +20,7 @@ const About = () => {
                     With over 8 years of experience on the audiovisual world 
                     and used to work in a high paced environment.
                 </div>
-                <h1 className="section-title">Skills</h1>
+                <div className="section-title">Skills</div>
                 <div className="skills-text">HTML, CSS, JavaScript, React, Photoshop, Illustrator.</div>
                 <div className="img-box">
                     <img src={htmlLogo} alt="HTML" />

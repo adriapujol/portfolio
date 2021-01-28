@@ -17,11 +17,11 @@ const Contact = () => {
         <div className="full-box bg-black" id="contact">
             <div className="contact">
                 <div className="contact-box">
-                    <h1 className="section-title">Contact</h1>
+                    <div className="section-title contact-title">Contact</div>
                     <ContactUs />
                 </div>
                 <div className="social">
-                    <h1 className="section-title">Social</h1>
+                    <div className="section-title contact-title">Social</div>
                     <div className="social-icons">
                         <a href="https://github.com/adriapujol" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-github" />
@@ -36,7 +36,6 @@ const Contact = () => {
                     <div className="social-text">You can also find me here</div>
                     <div className="thanks" onClick={toggleBarf}>
                         <img src={barf} alt="Thanks" className={showBarf ? "barf show-barf" : "barf"} />
-                        {/* <img src={barf} alt="thanks for visiting" /> */}
                         <img src={face} alt="face" className="face" />
                     </div>
                 </div>

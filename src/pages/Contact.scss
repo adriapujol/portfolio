@@ -10,12 +10,12 @@ $yellow: #f4d35e;
     min-width: 800px;
     color: #ffffff;
 
+    .contact-title {
+        margin-bottom: 1em;
+    }
+
     .contact-box {
         width: 45%;
-
-        h1 {
-            margin-bottom: 1em;
-        }
     }
 
     .social {
@@ -111,7 +111,7 @@ $yellow: #f4d35e;
             width: 80%;
             margin-bottom: 2.5em;
             min-width: 230px;
-            h1 {
+            .contact-title {
                 margin-bottom: 0.75em;
                 text-align: center;
             }

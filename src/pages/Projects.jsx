@@ -26,7 +26,7 @@ const Projects = () => {
 
         <div className="no-full-box bg-yellow" id="projects" ref={heightRef}>
             <div className="projects">
-                <h1 className="section-title">Projects</h1>
+                <div className="section-title">Projects</div>
                 <div className="projects-grid">
                     {
                         projectList.map(({ title, description, code, web, img }, i) => {
