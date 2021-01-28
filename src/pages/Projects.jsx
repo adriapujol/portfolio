@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Projects.scss';
 import ProjectCard from '../components/projectCard/ProjectCard';
-import projectOne from '../img/project1.jpg';
-import projectTwo from '../img/project2.jpg';
+import imgOne from '../img/project1.jpg';
+import imgTwo from '../img/project2.jpg';
+import imgThree from '../img/project3.jpg';
+import imgFour from '../img/project4.jpg';
+import projectInfo from '../projects.json';
 
 const Projects = () => {
 
@@ -13,15 +16,11 @@ const Projects = () => {
         setPageHeight(heightRef.current.offsetTop);
     }, [setPageHeight])
 
-    const title = "Gym Log";
-    const desc = "Web app that helps you track your progress in the gym. Lets you create workouts, exercises and save your lifts. Created with React, it uses Firebase authentication and Firestore as backend.";
-    const code = "https://github.com/adriapujol/fit_log";
-    const web = "https://adriapujol.github.io/fit_log/";
-
-    const title2 = "Norris Facts";
-    const desc2 = "Need a Chuck Norris fact right now? This is your site.";
-
-    const desc3 = "Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.Need a Chuck Norris fact right now? This is your site.";
+    const projectImg = [imgOne, imgTwo, imgThree, imgFour];
+    const projectText = [...projectInfo];
+    const projectList = projectText.map((proj, index) => {
+        return { ...proj, img: projectImg[index] };
+    })
 
     return (
 
@@ -29,10 +28,11 @@ const Projects = () => {
             <div className="projects">
                 <h1 className="section-title">Projects</h1>
                 <div className="projects-grid">
-                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectOne} pageHeight={pageHeight} />
-                    <ProjectCard title={title2} desc={desc2} code={code} web={web} img={projectTwo} pageHeight={pageHeight} />
-                    <ProjectCard title={title} desc={desc2} code={code} web={web} img={projectOne} pageHeight={pageHeight} />
-                    <ProjectCard title={title} desc={desc} code={code} web={web} img={projectTwo} pageHeight={pageHeight} />
+                    {
+                        projectList.map(({ title, description, code, web, img }, i) => {
+                            return <ProjectCard key={i} title={title} desc={description} code={code} web={web} img={img} pageHeight={pageHeight} />
+                        })
+                    }
                 </div>
             </div>
         </div>

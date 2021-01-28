@@ -1,14 +1,13 @@
 $bg-yellow: #f4d35e;
 
 .navbar {
-    position: relative;
-    width: 100%;
-    padding: 0 50px;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 50px;
     height: 10vh;
-    position: fixed;
     z-index: 99;
 
 
@@ -126,6 +125,14 @@ $bg-yellow: #f4d35e;
                 left: 25%;
                 top: 20%;
                 margin-bottom: 2em;
+
+                @media only screen and (max-width: 350px) {
+                    left: 28%;
+                }
+
+                @media only screen and (max-width: 300px) {
+                    left: 32%;
+                }
             }
 
             .link-black {

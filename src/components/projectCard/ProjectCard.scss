@@ -10,6 +10,7 @@ $yellow: #f4d35e;
     position: relative;
     width: 300px;
     height: 478px;
+    min-width: 250px;
     border-radius: 15px;
     overflow: hidden;
     
@@ -25,6 +26,11 @@ $yellow: #f4d35e;
     &:hover {
         transform: scale(1.1);
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+        @media only screen and (max-width: 475px) {
+            transform: scale(1.05);
+
+        }
     }
 
     .card-body {
@@ -56,6 +62,10 @@ $yellow: #f4d35e;
             &:hover {
                 color: $yellow;
             }
+
+            i {
+                margin-right: 5px;
+            }
         }
         .card-code {
             float: left;
@@ -81,9 +91,7 @@ $yellow: #f4d35e;
         }
     
         &:hover {
-            transform: scale(1);
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-            border: 5px solid #fff;
+            transform: scale(1.02);
         }
     
         .card-body {
@@ -94,20 +102,20 @@ $yellow: #f4d35e;
 
 
 .slide-in {
-    animation: 0.4s 0.15s ease-out downUp;
-    animation-fill-mode: forwards;
-    // opacity: 1;
-
+    animation: 0.4s ease-out downUp;
+    opacity: 1;
+    // animation-fill-mode: forwards;
+    
 }
 
 @keyframes downUp {
     0% {
         transform: translateY(70px);
-        opacity: 0;
+        // opacity: 0;
     }
     100% {
         transform: translateY(0px);
-        opacity: 1;
+        // opacity: 1;
     }
 }
 

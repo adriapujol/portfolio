@@ -1,3 +1,5 @@
+$yellow: #f4d35e;
+
 .contact {
     display: flex;
     justify-content: space-between;
@@ -32,7 +34,13 @@
             i {
                 color: #ffffff;
                 font-size: 50px;
+
+                &:hover {
+                    color: $yellow;
+                }
             }
+
+
         }
         .social-text {
             font-size: 1.3em;
@@ -52,7 +60,7 @@
                 width: 200px;
                 transform: translateX(-50px);
             }
-            @media only screen and (max-width: 380px) {
+            @media only screen and (max-width: 280px) {
                 width: 180px;
                 transform: translateX(-40px);
             }

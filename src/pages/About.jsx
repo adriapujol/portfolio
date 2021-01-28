@@ -14,16 +14,14 @@ const About = () => {
             <div className="about">
                 <h1 className="section-title">About</h1>
                 <div className="about-me">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus sollicitudin porta arcu a pharetra.
-                    Curabitur aliquet arcu vitae risus efficitur,
-                    quis aliquet arcu dapibus. Quisque eros mi, posuere ac odio at,
-                    imperdiet tempus risus. Donec vehicula, ante id mollis facilisis,
-                    orci sem commodo urna, eu luctus risus risus a magna.
-                    Vestibulum blandit nec massa id suscipit. Fusce eu velit lectus.
-                    </div>
+                    Motivated and multifaceted Bachelor in Telecommunication Technologies Engineering 
+                    focused and highly interested in web development. 
+                    A strong team player with genuine drive for self-improvement. 
+                    With over 8 years of experience on the audiovisual world 
+                    and used to work in a high paced environment.
+                </div>
                 <h1 className="section-title">Skills</h1>
-                <div className="skills-text">HTML, CSS, JavaScript, React, Photoshop, Illustrator</div>
+                <div className="skills-text">HTML, CSS, JavaScript, React, Photoshop, Illustrator.</div>
                 <div className="img-box">
                     <img src={htmlLogo} alt="HTML" />
                     <img src={cssLogo} alt="CSS" />

@@ -11,11 +11,11 @@ const ProjectCard = ({ title, desc, code, web, img, pageHeight }) => {
     useLayoutEffect(() => {
         const handleScroll = () => {
             let elementTop;
-            if(cardRef) {
-                elementTop= cardRef.current.getBoundingClientRect().y;
+            if (cardRef) {
+                elementTop = cardRef.current.getBoundingClientRect().y;
             }
-    
-            if (elementTop < pageHeight - pageHeight*0.5) {
+
+            if (elementTop < pageHeight - pageHeight * 0.5) {
                 setSlideIn(true);
             }
         }
@@ -30,8 +30,14 @@ const ProjectCard = ({ title, desc, code, web, img, pageHeight }) => {
                 <div className="card-desc">{desc}</div>
             </div>
             <div className="card-links">
-                <a href={code} target="_blank" className="card-code" rel="noopener noreferrer">code</a>
-                <a href={web} target="_blank" className="card-web" rel="noopener noreferrer">link</a>
+                <a href={code} target="_blank" className="card-code" rel="noopener noreferrer">
+                    <i className="fas fa-code" />
+                    Code
+                </a>
+                <a href={web} target="_blank" className="card-web" rel="noopener noreferrer">
+                    <i className="fas fa-link" />
+                    Link
+                </a>
             </div>
         </div>
     )
