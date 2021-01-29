@@ -47,4 +47,17 @@ $yellow: #f4d35e;
             background-color: $yellow;
         }
     }
+
+    .required {
+        margin-bottom: 0.5em;
+    }
+
+    .message {
+        text-align: center;
+    }
+    
+    .fail {
+        color: #ff2d2d;
+    }
+
 }
