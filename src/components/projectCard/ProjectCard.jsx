@@ -12,7 +12,7 @@ const ProjectCard = ({ title, desc, code, web, img, pageHeight }) => {
         const handleScroll = () => {
             let elementTop;
             if (cardRef) {
-                elementTop = cardRef.current.getBoundingClientRect().y;
+                elementTop = cardRef.current.getBoundingClientRect().top;
             }
 
             if (elementTop < pageHeight - pageHeight * 0.5) {
