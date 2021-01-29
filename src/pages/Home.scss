@@ -12,6 +12,8 @@ $yellow: #f4d35e;
     .landing-img {
         max-width: 200%;
         height: auto;
+        margin-top: 3em;
+        -ms-grid-row-align: flex-end;
         align-self: flex-end;
     }
 }

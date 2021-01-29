@@ -22,7 +22,7 @@ const Home = () => {
                             smooth={true}
                             duration={300}
                             offset={-40}
-                        >Portfolio </Link>
+                        >Projects </Link>
                         <Link
                             className="call-to-action"
                             to="contact"
