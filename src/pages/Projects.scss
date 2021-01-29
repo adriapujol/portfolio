@@ -1,0 +1,36 @@
+.projects {
+    height: 100%;
+    width: 90%;
+    padding: 8vh 0 5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;
+
+
+    .projects-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5em;
+
+        margin: 2em 0em;
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+
+    
+    @media only screen and (max-width: 700px) {
+        font-size: 1.2em; 
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: 1em;  
+    }
+}
+
+

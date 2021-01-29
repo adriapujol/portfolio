@@ -1,0 +1,125 @@
+$yellow: #f4d35e;
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;
+    width: 70%;
+    max-width: 1200px;
+    min-width: 800px;
+    color: #ffffff;
+
+    .contact-title {
+        margin-bottom: 1em;
+    }
+
+    .contact-box {
+        width: 45%;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        .social-icons {
+            margin: 1em 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            i {
+                color: #ffffff;
+                font-size: 50px;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+
+
+        }
+        .social-text {
+            font-size: 1.3em;
+        }  
+        
+        .thanks {
+
+            margin-top: 2.5em;
+            position: relative;
+            height: 200px;
+            width: 250px;
+            transform: translateX(-65px);
+            cursor: pointer;
+
+            @media only screen and (max-width: 380px) {
+                height: 150px;
+                width: 200px;
+                transform: translateX(-50px);
+            }
+            @media only screen and (max-width: 280px) {
+                width: 180px;
+                transform: translateX(-40px);
+            }
+
+            .face {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: auto;
+                width: 100px; 
+
+                @media only screen and (max-width: 380px) {
+                    width: 80px; 
+                }    
+            }
+
+            .barf {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: auto;
+                width: 150px; 
+                visibility: hidden;  
+
+                @media only screen and (max-width: 380px) {
+                    width: 120px; 
+                }   
+                @media only screen and (max-width: 280px) {
+                    width: 100px; 
+                }
+            }
+
+            .show-barf {
+                visibility: visible;
+            }
+            
+        }
+    }
+
+    @media only screen and (max-width: 1080px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 250px;
+        max-width: 700px;
+        .contact-box {
+            width: 80%;
+            margin-bottom: 2.5em;
+            min-width: 230px;
+            .contact-title {
+                margin-bottom: 0.75em;
+                text-align: center;
+            }
+        }
+        .social {
+            width: 100%;
+            margin-top: 2em;
+        }
+    }    
+
+}

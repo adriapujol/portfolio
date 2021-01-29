@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Gym Log",
+        "description": "Web app that helps you track your progress in the gym. Lets you create workouts, exercises and save your lifts. Created with React, it uses Firebase authentication and Firestore as backend.",
+        "code": "https://github.com/adriapujol/fit_log",
+        "web": "https://adriapujol.github.io/fit_log/"
+    },
+    {
+        "title": "Norris Facts",
+        "description": "Do you need a Chuck Norris fact but can’t remember any? This web helps you with that. Get a Chuck Norris fact with based on categories.",
+        "code": "https://github.com/adriapujol/norrisfacts",
+        "web": "https://adriapujol.github.io/norrisfacts/"
+    },
+    {
+        "title": "Hex to RGB",
+        "description": "React web app that converts any six digit HEX color to the RGB equivalent. It also gets you the complementary color.",
+        "code": "https://github.com/adriapujol/hexconverter",
+        "web": "https://adriapujol.github.io/hexconverter/"
+    },
+    {
+        "title": "Trivia Game",
+        "description": "Web trivia game that uses Open Trivia Database API.",
+        "code": "https://github.com/adriapujol/triviaAPI",
+        "web": "https://adriapujol.github.io/triviaAPI/"
+    }
+]
