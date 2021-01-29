@@ -36,13 +36,11 @@ $yellow: #f4d35e;
         text-decoration: none;
         display: inline-block;
         transition: all 0.25s ease-in-out;
-        // border: 5px solid $yellow;
         outline: 5px solid black;
         border: 0;
         cursor: pointer;
 
         &:hover, &:active {
-            // color: #fff;
             outline-offset: -10px;
             background-color: $yellow;
         }
@@ -55,7 +53,7 @@ $yellow: #f4d35e;
     .message {
         text-align: center;
     }
-    
+
     .fail {
         color: #ff2d2d;
     }

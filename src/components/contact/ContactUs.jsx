@@ -11,9 +11,9 @@ export default function ContactUs() {
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
 
-  const USER_ID = "user_jYZXzxdDKPQLjZdYTpglK";
-  const TEMPLATE_ID = "template_fgg4umi";
-  const SERVICE_ID = "service_pnqklrl";
+  const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
   const successMessage = "Thanks! I'll get back to you as soon as I can.";
   const failMessage = "Sorry! There was an error and the message could not be sent.";
