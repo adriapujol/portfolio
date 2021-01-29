@@ -4,13 +4,13 @@ import './Navbar.scss';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 
-const Navbar = ({ setNavHeight }) => {
+const Navbar = () => {
 
     const [solidBackground, setSolidBackground] = useState(false);
     const [clickedBurger, setClickedBurger] = useState(false);
 
     const changeBackground = () => {
-        if (window.scrollY > 150) {
+        if (window.pageYOffset > 150) {
             setSolidBackground(true);
         } else {
             setSolidBackground(false);
