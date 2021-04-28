@@ -22,5 +22,11 @@
         "description": "Web trivia game that uses Open Trivia Database API.",
         "code": "https://github.com/adriapujol/triviaAPI",
         "web": "https://adriapujol.github.io/triviaAPI/"
+    },
+    {
+        "title": "Contacts",
+        "description": "Full stack app where you can save contacts. Built with the MERN stack.",
+        "code": "https://github.com/adriapujol/contacts",
+        "web": "https://adriapujol.github.io/contacts/"
     }
 ]
