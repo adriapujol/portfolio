@@ -6,6 +6,7 @@ import imgTwo from '../img/project2.jpg';
 import imgThree from '../img/project3.jpg';
 import imgFour from '../img/project4.jpg';
 import imgFive from '../img/project5.jpg';
+import imgSix from '../img/project6.jpg';
 import projectInfo from '../projects.json';
 
 const Projects = () => {
@@ -17,7 +18,7 @@ const Projects = () => {
         setPageHeight(heightRef.current.offsetTop);
     }, [setPageHeight])
 
-    const projectImg = [imgOne, imgTwo, imgThree, imgFour, imgFive];
+    const projectImg = [imgOne, imgSix, imgTwo, imgThree, imgFour, imgFive];
     const projectText = [...projectInfo];
     const projectList = projectText.map((proj, index) => {
         return { ...proj, img: projectImg[index] };

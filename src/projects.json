@@ -6,6 +6,12 @@
         "web": "https://adriapujol.github.io/fit_log/"
     },
     {
+        "title": "Wedding Invitation",
+        "description": "Mobile first wedding invitation to collect information from future guests. Built with React, NodeJS, and SASS.",
+        "code": "https://github.com/adriapujol/form-app",
+        "web": "https://jennifer-et-carlos.netlify.app/"
+    },
+    {
         "title": "Norris Facts",
         "description": "Do you need a Chuck Norris fact but can’t remember any? This web helps you with that. Get a Chuck Norris fact with based on categories.",
         "code": "https://github.com/adriapujol/norrisfacts",
